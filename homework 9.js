@@ -136,9 +136,9 @@ function exercise8() {
 }
 
 //exercise 9:
-
+let interval1;
 function exercise9() {
-  setInterval(pickRanNum, 1000);
+  interval1 = setInterval(pickRanNum, 1000);
 }
 
 function pickRanNum() {
@@ -147,9 +147,9 @@ function pickRanNum() {
 }
 
 //איך עושים סטופ לאינטרוול?
-// const stopExercise9 = () => {
-//   clearInterval();
-// };
+const stopExercise9 = () => {
+  clearInterval(interval1);
+};
 
 //exercise 10:
 
@@ -162,17 +162,19 @@ function random_bg_color() {
 
   document.body.style.background = bgColor;
 }
-
+let interval2;
 function exercise10() {
-  setInterval(random_bg_color, 1000);
+  interval2 = setInterval(random_bg_color, 1000);
 }
+const stopExercise10 = () => clearInterval(interval2);
 
 //exercise 11:
 let resultBox = document.getElementById("name-box");
 let counter = 1;
+let interval3;
 
 function exercise11() {
-  setInterval(setArray, 3000);
+  interval3 = setInterval(setArray, 3000);
 }
 
 function setArray() {
@@ -183,6 +185,8 @@ function setArray() {
   console.log(array);
   resultBox.innerHTML = `<p>array ${counter++}: </p> ${array}`;
 }
+
+const stopExercise11 = () => clearInterval(interval3);
 
 //annonymous function
 const anonymousFunction = () => {
